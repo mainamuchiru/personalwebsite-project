@@ -1,0 +1,192 @@
+
+
+
+body,html {
+  background-color: violet;
+  
+  
+}
+
+#grid-container {
+
+  background-color: black;
+  display: grid;
+
+  grid-template-areas:
+    "a a a a a a a a a a"
+    "b b b b b b b b b b"
+    "c c c c c c c c c c"
+    "d d d d d d d d d d"
+    "e e e e e e e e e e"
+    "f f f f f f f f f f"
+    "g g g g g g g g g g";
+}
+
+#divNav {
+  grid-area: a;
+  display: flex;
+  background-color: #333; /* Dark background color */
+  color: white; /* Light text color for contrast */
+  text-align: center; /* Center the content */
+  padding: 10px 0; /* Add space above and below the content */
+  width: 100%; /* Ensure the footer spans the full width */
+  font-size: 14px; /* Adjust font size */
+  justify-content: space-evenly;
+  position: sticky;
+  
+  
+}
+
+#divNav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+#divNav a:hover {
+  color: yellow;
+}
+
+#mydetailssection {
+  grid-area: b;
+  display: flex;
+  flex-wrap: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: greenyellow;
+}
+.mydetails-div {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex: 50%;
+  text-align: center;
+  background-color: gold;
+}
+
+.mydetails-div header{
+  color: maroon;
+  font-size: 20px;
+}
+.mydetails-div > div:nth-of-type(1) {
+    flex: 1;
+  background-color: black;
+}
+
+#aboutme-section {
+  grid-area: c;
+  text-align: center;
+  background-color: red;
+}
+
+#header-projsection {
+  grid-area: d;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#project-section {
+  grid-area: e;
+  display: flex;
+  flex-wrap: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: greenyellow;
+}
+
+.myprojects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex: 50%;
+  text-align: center;
+  background-color: gold;
+}
+
+#myfooter-last {
+  grid-area: f;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: #333; /* Dark background color */
+  color: white; /* Light text color for contrast */
+  text-align: center; /* Center the content */
+
+  font-size: 14px; /* Adjust font size */
+
+  /* grid-area: d; */
+}
+
+#myfooter-last p {
+  color: yellow;
+  text-decoration: none;
+  font-style: italic;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  #grid_container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "a a a a a a a a a a "
+      "b b b b b b b b b b"
+      "c c c c c c c c c c"
+      "d d d d d d d d d d"
+      "e e e e e e e e e e "
+      "f f f f f f f f f f ";
+  }
+
+  #divNav {
+    background-color: black;
+    font-size: 50px;
+    text-decoration: none;
+  }
+
+  #project-section {
+    flex-wrap: wrap;
+    background-color: greenyellow;
+  }
+
+  #mygitlink {
+    flex: 0 0 100%;
+  }
+
+  #mydetailssection {
+    flex-wrap: wrap;
+    background-color: greenyellow;
+  }
+
+  .mydetails-div {
+    flex: 0 0 100%;
+  }
+
+  .myprojects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex: 0 0 100%;
+    text-align: center;
+    background-color: gold;
+  }
+
+  #divNav > a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+  }
+
+  #myfooter-last {
+    position: relative;
+  }
+
+}
